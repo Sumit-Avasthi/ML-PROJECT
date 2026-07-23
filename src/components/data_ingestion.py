@@ -47,12 +47,3 @@ class DataIngestion:
         except Exception as ex:
             raise CustomeException(ex,sys)
         
-
-if __name__=="__main__":
-    # obj2 = DataIngestionConfig()
-    obj1 = DataIngestion()
-    obj1.initiate_data_ingestion()
-
-    obj = DataTransformation()
-
-    train_arr,test_arr,preprocessor_path = obj.initiate_data_transformation(obj1.ingestion_config.train_data_path,obj1.ingestion_config.test_data_path)
